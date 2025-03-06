@@ -1,7 +1,7 @@
 -- a.I
 CREATE TABLE customers
 (
-    id bigint NOT NULL,
+    id integer NOT NULL,
     name character varying NOT NULL,
     PRIMARY KEY (id)
 );
@@ -9,7 +9,7 @@ CREATE TABLE customers
 -- a.II
 CREATE TABLE products
 (
-    id bigint NOT NULL,
+    id integer NOT NULL,
     name character varying NOT NULL,
     price double precision NOT NULL,
     PRIMARY KEY (id)
@@ -18,8 +18,8 @@ CREATE TABLE products
 -- a.III
 CREATE TABLE orders
 (
-    id bigint NOT NULL,
-    customer_id bigint NOT NULL,
+    id integer NOT NULL,
+    customer_id integer NOT NULL,
     PRIMARY KEY (id),
     CONSTRAINT order_customer FOREIGN KEY (customer_id)
         REFERENCES customers (id) MATCH SIMPLE
@@ -30,9 +30,9 @@ CREATE TABLE orders
 -- a.IV
 CREATE TABLE order_items
 (
-    id bigint NOT NULL,
-    order_id bigint NOT NULL,
-    product_id bigint NOT NULL,
+    id integer NOT NULL,
+    order_id integer NOT NULL,
+    product_id integer NOT NULL,
     amount integer NOT NULL,
     PRIMARY KEY (id),
     CONSTRAINT order_item_order FOREIGN KEY (order_id)
