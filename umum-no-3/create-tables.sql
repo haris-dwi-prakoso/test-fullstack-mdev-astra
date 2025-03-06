@@ -1,3 +1,4 @@
+-- a.I
 CREATE TABLE customers
 (
     id bigint NOT NULL,
@@ -5,6 +6,7 @@ CREATE TABLE customers
     PRIMARY KEY (id)
 );
 
+-- a.II
 CREATE TABLE products
 (
     id bigint NOT NULL,
@@ -13,6 +15,7 @@ CREATE TABLE products
     PRIMARY KEY (id)
 );
 
+-- a.III
 CREATE TABLE orders
 (
     id bigint NOT NULL,
@@ -24,6 +27,7 @@ CREATE TABLE orders
         ON DELETE RESTRICT
 );
 
+-- a.IV
 CREATE TABLE order_items
 (
     id bigint NOT NULL,
