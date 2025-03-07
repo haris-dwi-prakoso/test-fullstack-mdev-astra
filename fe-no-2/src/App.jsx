@@ -42,6 +42,7 @@ function ContactForm() {
   return (
     <form onSubmit={onSubmit}>
       <div>
+        <label>Name</label>
         <input
           type='text'
           value={nameValue}
@@ -51,6 +52,7 @@ function ContactForm() {
         {nameError && <p>{nameError}</p>}
       </div>
       <div>
+        <label>Email</label>
         <input
           type='email'
           value={emailValue}

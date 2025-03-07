@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "serve": "ts-node src/server.ts",
+    "start": "nodemon"
   },
   "keywords": [],
   "author": "",
@@ -27,5 +29,9 @@
     "tslint": "^5.20.1",
     "typeorm": "^0.3.21",
     "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@types/koa-cors": "^0.0.6",
+    "koa-cors": "^0.0.16"
   }
 }
